@@ -1,11 +1,11 @@
-Documentation of Iris Classification using Decision Tree Model
-Project Overview
-This project aims to predict the species of flowers in the Iris dataset using a Decision Tree model. The dataset contains 150 samples of Iris flowers, divided into three species: Setosa, Versicolor, and Virginica. Each sample includes four features: sepal length, sepal width, petal length, and petal width, all measured in centimeters.
+# Documentation of Iris Classification using Decision Tree Model
+# Project Overview
+* This project aims to predict the species of flowers in the Iris dataset using a Decision Tree model. The dataset contains 150 samples of Iris flowers, divided into three species: Setosa, Versicolor, and Virginica. Each sample includes four features: sepal length, sepal width, petal length, and petal width, all measured in centimeters.
 
-The objective is to build a machine learning model that can predict the species of an Iris flower based on its features, using the Decision Tree algorithm.
+* The objective is to build a machine learning model that can predict the species of an Iris flower based on its features, using the Decision Tree algorithm.
 
-Problem Statement
-Given the Iris dataset with the following features:
+# Problem Statement
+* Given the Iris dataset with the following features:
 
 sepal_length: Length of the sepal in centimeters.
 sepal_width: Width of the sepal in centimeters.
@@ -16,7 +16,8 @@ The task is to classify the Iris flower into one of three species:
 Iris Setosa
 Iris Versicolor
 Iris Virginica
-Data Preprocessing
+
+# Data Preprocessing
 Data Loading: The dataset is loaded from the Iris CSV file, or by directly using the load_iris() function from sklearn.datasets.
 Feature and Target Separation: The features (X) are separated from the target variable (y), which represents the species of the flower.
 Train-Test Split: The dataset is split into training and testing sets using the train_test_split() function from sklearn.model_selection, with 80% of the data used for training and 20% for testing.
@@ -25,8 +26,10 @@ Handling Outliers: Outliers in the data are detected using the IQR (Interquartil
 Model Selection
 Model Used: Decision Tree Classifier from sklearn.tree.
 Reason for Selection: The Decision Tree model is chosen for its simplicity, ease of interpretation, and ability to model non-linear relationships between features and the target variable. It does not require feature scaling and can handle both continuous and categorical data.
-Model Evaluation
-The Decision Tree classifier is evaluated using the following metrics:
+
+# Model Evaluation
+
+*The Decision Tree classifier is evaluated using the following metrics:
 
 Confusion Matrix: The confusion matrix provides insight into how many predictions were correctly or incorrectly classified for each class.
 
