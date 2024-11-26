@@ -32,51 +32,53 @@
 
 *The Decision Tree classifier is evaluated using the following metrics:
 
-Confusion Matrix: The confusion matrix provides insight into how many predictions were correctly or incorrectly classified for each class.
+* Confusion Matrix: The confusion matrix provides insight into how many predictions were correctly or incorrectly classified for each class.
 
-Diagonal elements represent correct predictions.
-Off-diagonal elements represent misclassifications.
-Classification Report: The classification report includes the following evaluation metrics for each class:
+* Diagonal elements represent correct predictions.
+* Off-diagonal elements represent misclassifications.
+* 
+# Classification Report: The classification report includes the following evaluation metrics for each class:
 
-Precision: Proportion of true positive predictions out of all positive predictions.
-Recall: Proportion of true positive predictions out of all actual positive instances.
-F1-Score: The harmonic mean of precision and recall.
-Accuracy: The overall percentage of correct predictions.
-Accuracy: The model’s accuracy on the test set is reported as 100% (1.00), indicating that the model predicts all instances correctly.
+* Precision: Proportion of true positive predictions out of all positive predictions.
+* Recall: Proportion of true positive predictions out of all actual positive instances.
+* F1-Score: The harmonic mean of precision and recall.
+* Accuracy: The overall percentage of correct predictions.
+### Accuracy: The model’s accuracy on the test set is reported as 100% (1.00), indicating that the model predicts all instances correctly.
 
-Confusion Matrix
-lua
-Copy code
-[[10  0  0]
+# Confusion Matrix
+ 
+ 
+* ( [[10  0  0]
  [ 0  9  0]
- [ 0  0 11]]
-This matrix shows that the model predicted the correct class for all test samples:
+ [ 0  0 11]])
+* This matrix shows that the model predicted the correct class for all test samples:
 
-10 samples of Iris Setosa were correctly classified.
-9 samples of Iris Versicolor were correctly classified.
-11 samples of Iris Virginica were correctly classified.
-Classification Report
-markdown
-Copy code
+* 10 samples of Iris Setosa were correctly classified.
+* 9 samples of Iris Versicolor were correctly classified.
+* 11 samples of Iris Virginica were correctly classified.
+  
+# Classification Report
+ 
+ 
               precision    recall  f1-score   support
            0       1.00      1.00      1.00        10
            1       1.00      1.00      1.00         9
            2       1.00      1.00      1.00        11
 
     accuracy                           1.00        30
-   macro avg       1.00      1.00      1.00        30
-weighted avg       1.00      1.00      1.00        30
-The precision, recall, and f1-score for all classes are 1.00, which indicates perfect classification performance on the test set.
-Model Performance
-Accuracy: The model achieved 100% accuracy on the test set, which suggests that it perfectly classifies all samples.
-Possible Overfitting: Although the model performs excellently on the test set, it is important to note that Decision Trees are prone to overfitting. To mitigate overfitting, hyperparameter tuning (such as limiting tree depth) or cross-validation can be employed.
-Next Steps
-Hyperparameter Tuning: Use techniques like GridSearchCV or RandomizedSearchCV to find the optimal hyperparameters (e.g., maximum depth, minimum samples per leaf) for the Decision Tree model.
-Cross-Validation: Implement k-fold cross-validation to evaluate model performance across multiple splits of the dataset, providing a more reliable measure of generalization.
-Model Improvement: Try using more complex models like Random Forests or Support Vector Machines (SVMs) for comparison and potentially better performance.
-Code Implementation
-python
-Copy code
+* macro avg       1.00      1.00      1.00        30
+* weighted avg       1.00      1.00      1.00        30
+
+* The precision, recall, and f1-score for all classes are 1.00, which indicates perfect classification performance on the test set.
+  
+# Model Performance
+* Accuracy: The model achieved 100% accuracy on the test set, which suggests that it perfectly classifies all samples.
+* Possible Overfitting: Although the model performs excellently on the test set, it is important to note that Decision Trees are prone to overfitting. To mitigate overfitting, hyperparameter tuning (such as limiting tree depth) or cross-validation can be employed.
+### Next Steps
+* Hyperparameter Tuning: Use techniques like GridSearchCV or RandomizedSearchCV to find the optimal hyperparameters (e.g., maximum depth, minimum samples per leaf) for the Decision Tree model.
+* Cross-Validation: Implement k-fold cross-validation to evaluate model performance across multiple splits of the dataset, providing a more reliable measure of generalization.
+* Model Improvement: Try using more complex models like Random Forests or Support Vector Machines (SVMs) for comparison and potentially better performance.
+ 
 # Import necessary libraries
 import pandas as pd
 from sklearn.datasets import load_iris
